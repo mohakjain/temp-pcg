@@ -1,0 +1,53 @@
+.pcg-navbar-container {
+    width: 95%;
+}
+
+.pcg-navbar-logo {
+
+}
+
+.pcg-navbar-all {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Gothic-light";
+    font-size: 1rem;
+}
+
+.pcg-navbar-item {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.pcg-navbar-link {
+    color: #333333;
+    text-decoration: none;
+}
+
+.pcg-nav-underline {
+    text-decoration: none;
+    position: relative;
+}
+  
+.pcg-nav-underline:hover {
+    text-decoration: none;
+    color: #333333;
+}
+  
+.pcg-nav-underline::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -10px;
+    left: 0;
+    background-color: #af2d2e;
+    visibility: hidden;
+    /*transform: scaleX(0);*/
+    transition: all 0.0s ease-in-out 0s;
+}
+  
+.pcg-nav-underline:hover::before {
+    visibility: visible;
+    width: 100%;
+    /*transform: scaleX(1);*/
+}
