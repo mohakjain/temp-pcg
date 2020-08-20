@@ -1,0 +1,35 @@
+.pcg-wrapper-white {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    font-family: Gothic-light;
+    
+}
+
+.pcg-home-mission-row {
+    
+}
+
+.pcg-home-mission-link {
+    color: #333333;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+.pcg-home-mission-link:hover {
+    color: gray;
+    font-size: 1.5vw;
+    text-decoration: none;
+}
+
+.pcg-home-mission-p {
+    margin-bottom: 20px;
+    font-size: 2vw;
+    color: #333333;
+}
+
+.pcg-home-mission-h1 {
+    font-size: 3vw;
+    margin-bottom: 30px;
+    color: #333333;
+}

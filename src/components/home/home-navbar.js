@@ -3,19 +3,16 @@ import PropTypes from "prop-types"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/nav-bar.css'
+import '../../styles/home-nav-bar.css'
 
 
-const NavBar = ({}) => {
+const HomeNavBar = ({}) => {
     const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "pcg-logo-dark.png" }) {
+      file(relativePath: { eq: "pcg-logo-light.png" }) {
         childImageSharp {
           fixed(width: 150) {
             ...GatsbyImageSharpFixed
@@ -25,8 +22,8 @@ const NavBar = ({}) => {
     }
   `)
     return (
-        <Container className='pcg-navbar-container' fluid>
-            <Navbar expand='md' className='pcg-navbar-all'>
+        <Container className='pcg-hnavbar-container' fluid>
+            <Navbar expand='md' className='pcg-hnavbar-all'>
                 <Navbar.Brand>
                     <Link to='/'>
                     <Img
@@ -38,17 +35,17 @@ const NavBar = ({}) => {
                 <Navbar.Toggle aria-controls="navBarResponsive"/>
                 <Navbar.Collapse id="navBarResponsive">
                 <Nav defaultActiveKey="/home" className='ml-auto'>
-                    <Nav.Item className='pcg-navbar-item'>
-                        <Link to='/about' className='pcg-navbar-link pcg-nav-underline' activeClassName='active'>About</Link>
+                    <Nav.Item className='pcg-hnavbar-item'>
+                        <Link to='/about' className='pcg-hnavbar-link pcg-hnav-underline' activeClassName='active'>About</Link>
                     </Nav.Item>
-                    <Nav.Item className='pcg-navbar-item'>
-                        <Link to='/projects' className='pcg-navbar-link pcg-nav-underline' activeClassName='active'>Projects</Link>
+                    <Nav.Item className='pcg-hnavbar-item'>
+                        <Link to='/projects' className='pcg-hnavbar-link pcg-hnav-underline' activeClassName='active'>Projects</Link>
                     </Nav.Item>
-                    <Nav.Item className='pcg-navbar-item'>
-                        <Link to='/blog' className='pcg-navbar-link pcg-nav-underline' activeClassName='active'>Blog</Link>
+                    <Nav.Item className='pcg-hnavbar-item'>
+                        <Link to='/blog' className='pcg-hnavbar-link pcg-hnav-underline' activeClassName='active'>Blog</Link>
                     </Nav.Item>
-                    <Nav.Item className='pcg-navbar-item'>
-                        <Link to='/join' className='pcg-navbar-link pcg-nav-underline' activeClassName='active'>Join</Link>
+                    <Nav.Item className='pcg-hnavbar-item'>
+                        <Link to='/join' className='pcg-hnavbar-link pcg-hnav-underline' activeClassName='active'>Join</Link>
                     </Nav.Item>
                 </Nav>
                 </Navbar.Collapse>
@@ -57,4 +54,4 @@ const NavBar = ({}) => {
     )
 }
 
-export default NavBar
+export default HomeNavBar

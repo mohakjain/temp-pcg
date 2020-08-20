@@ -25,9 +25,12 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div>
+    <>
     <NavBar/>
-    </div>
+    <main>
+      {children}
+    </main>
+    </>
   )
 }
 
